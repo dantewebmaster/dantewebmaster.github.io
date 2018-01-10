@@ -1,0 +1,50 @@
+.site-footer {
+	background: #000 url(../images/pattern-dark.png);
+	background-attachment: fixed;
+	padding: 6rem 0 3rem;
+	.copyright {
+		margin-top: 2rem;
+	}
+	.credits {
+		a {
+			font-weight: bold;
+			&:hover {
+				color: #111;
+			}
+		}
+	}
+}
+
+.footer-widgets {
+	padding-bottom: 4rem;
+	a {
+		color: #cdcdcd;
+		&:hover {
+			color: #fff;
+		}
+	}
+	.social-network {
+		text-align: left;
+		a {
+			color: #cdcdcd;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+	.custom-menu {
+		padding-left: 2rem;
+		ul {
+			margin-top: 1rem;
+		}
+		a {
+			color: #cdcdcd;
+			display: inline-block;
+			font-size: 14px;
+			padding: 0.5rem 0;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}

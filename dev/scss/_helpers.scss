@@ -1,0 +1,48 @@
+.fullscreen {
+	height: 100vh;
+	width: 100%;
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+.text-lowercase {
+	text-transform: lowercase;
+}
+
+.clearfix {
+	@include clearfix;
+}
+.only-mobile {
+	display: none;
+}
+.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+@include below($extra_small_breackpoint) {
+	.hidden-xs {
+		display: none;
+	}
+	.only-mobile {
+		display: block;
+	}
+}
