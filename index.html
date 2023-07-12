@@ -1,17 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Desenvolvedor web full-stack focado em tecnologias front-end"
+    />
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
-    <title>Dante Webmaster - Desenvolvedor web, Full-Stack</title>
+    <title>Dante Webmaster - Desenvolvedor web, mobile, Full-Stack</title>
     <link rel="stylesheet" href="css/styles.min.css" />
+    <link rel="stylesheet" href="css/fix.css" />
+
+    <!-- pen graph tags -->
+    <meta
+      property="og:title"
+      content="Dante Webmaster - Desenvolvedor web, mobile, Full-Stack"
+    />
+    <meta
+      property="og:description"
+      content="Desenvolvedor web full-stack focado em tecnologias front-end"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://dantewebmaster.github.io/images/header.jpg"
+    />
+    <meta property="og:url" content="https://dantewebmaster.github.io/" />
   </head>
   <body>
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
     <header id="inicio" class="site-header fullscreen" role="banner">
-      <div class="container-fluid">
+      <div id="nav-container" class="nav-container container-fluid">
         <div class="row">
           <div class="header-logo col-xs-2">
             <a href="#"
@@ -30,13 +51,16 @@
               aria-controls="primary-menu"
               aria-expanded="false"
             >
-              <span></span> <span></span> <span></span> <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </button>
             <ul id="nav-menu">
-              <li><a href="#inicio">Início</a></li>
-              <li><a href="#servicos">Serviços</a></li>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#contato">Contato</a></li>
+              <li><a class="menu-link" href="#inicio">Início</a></li>
+              <li><a class="menu-link" href="#servicos">Serviços</a></li>
+              <li><a class="menu-link" href="#sobre">Sobre</a></li>
+              <li><a class="menu-link" href="#contato">Contato</a></li>
             </ul>
           </nav>
           <div class="header-phone col-xs-3 text-right hidden-xs">
@@ -54,7 +78,7 @@
             <div class="row">
               <div class="service col-sm-3 col-xs-6">
                 <i class="icon fa fa-cogs"></i>
-                <h2>Desenvolvimento<br />Web & Gráfico</h2>
+                <h2>Desenvolvimento<br />Web, Mobile & Gráfico</h2>
               </div>
               <div class="service col-sm-3 col-xs-6">
                 <i class="icon fa fa-share-alt"></i>
@@ -92,15 +116,31 @@
                 <h1 class="text-uppercase">Dante Webmaster</h1>
                 <h2>Desenvolvedor Web, Full-Stack</h2>
                 <p>
-                  Desenvolvedor Web Full-Stack. PHP, Node, React, APIs Rest.
-                  Criação de sites Wordpress.
+                  Desenvolvedor Web Full-Stack. Node, React, React Native
+                  Angular, APIs Rest. Criação de sites Wordpress.
                 </p>
                 <p>
-                  Estudo desenvolvimento web desde 2012 e durante esse período
-                  tive a oportunidade de trabalhar alocado em algumas agências
-                  de comunicação e marketing de São Paulo e também atuar
-                  remotamente como freelancer em agências digitais.
+                  Atualmente sou um desenvolvedor focado em tecnologias
+                  front-end. Maiores experiências com JavaScript, React,
+                  Angular, HTML 5, CSS3, Typescript e outras ferramentas do
+                  mundo front-end. Experiência em back-end e criação de APIs
+                  rest com Node, Sequelize, GraphQl e Swagger.
                 </p>
+                <p>
+                  Trabalhei por mais de 3 anos na Avanade, uma consultoria
+                  multinacional de tecnologia, onde tive a oportunidade de atuar
+                  em projetos muito desafiadores para grandes empresas, como
+                  Natura, Banco Itaú, Santander, Safra e outros. Nos quais pude
+                  evoluir muito os meus conhecimentos técnicos. Atualmente estou
+                  trabalhando na Globo, onde continuo a minha evolução técnica e
+                  pessoal, atuando em projetos muito importantes para a empresa.
+                </p>
+                <blockquote>
+                  <p>
+                    Sempre me destaquei por um incrível senso de dono por todos
+                    os projetos em que tive a oportunidade de contribuir.
+                  </p>
+                </blockquote>
                 <span class="text-center center"
                   ><a
                     class="btn btn-dark"
@@ -123,7 +163,7 @@
                   </div>
                   <div class="col-md-8 col-sm-6 col-xs-9 text-left">
                     <h3>
-                      Atualmente residindo em<br />São Paulo / SP - Brasil
+                      Atualmente residindo em<br />Fortaleza / CE - Brasil
                     </h3>
                   </div>
                 </div>
@@ -156,11 +196,12 @@
     <footer id="colophon" class="site-footer" role="content-info">
       <div class="container-fluid">
         <p class="copyright text-center">
-          &copy; 2018: Dante Webmaster - Desenvolvimento Web
+          &copy; 2023: Dante Webmaster - Desenvolvimento Web
         </p>
       </div>
     </footer>
     <a href="#inicio" id="to-top" class="to-top">Início</a>
     <script src="js/main.min.js"></script>
+    <script src="js/fix.js"></script>
   </body>
 </html>
