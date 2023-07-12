@@ -4,6 +4,12 @@ blockquote {
   padding: 0 16px;
 }
 
+blockquote p {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #222;
+}
+
 .nav-container {
   position: fixed;
   top: 0;
@@ -11,6 +17,7 @@ blockquote {
   width: 100%;
   padding: 8px;
   z-index: 1000;
+  max-width: 100%;
 }
 
 .site-header {
