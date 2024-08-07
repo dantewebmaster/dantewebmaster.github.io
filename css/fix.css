@@ -65,16 +65,16 @@ blockquote p {
   height: 100%;
   object-fit: cover;
   opacity: 0.2;
-  filter: blur(10px);
+  filter: blur(12px);
 }
 
 .main-headline {
   color: #fff;
   opacity: 0.8;
   text-align: center;
-  font-size: 5rem;
+  font-size: 2.2rem;
+  line-height: 3rem;
   font-weight: 200;
-  line-height: 5.5rem;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -101,5 +101,10 @@ blockquote p {
 
   .nav-container.nav-dark .btn.btn-light:hover {
     border-color: #222;
+  }
+
+  .main-headline {
+    font-size: 5rem;
+    line-height: 5.5rem;
   }
 }
