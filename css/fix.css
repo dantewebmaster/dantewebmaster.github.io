@@ -1,3 +1,9 @@
+h1,
+h2 {
+  font-family: Raleway, sans-serif;
+  font-weight: 400;
+}
+
 blockquote {
   margin: 0;
   border-left: 6px solid #ddd;
@@ -22,6 +28,8 @@ blockquote p {
 
 .site-header {
   background-attachment: fixed;
+  position: relative;
+  background: #000;
 }
 
 .header-logo {
@@ -47,6 +55,33 @@ blockquote p {
 
 .main-navigation:not(.toggled) .menu-toggle.menu-toggle-dark span {
   background: #222;
+}
+
+.cover-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+  filter: blur(10px);
+}
+
+.main-headline {
+  color: #fff;
+  opacity: 0.8;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 200;
+  line-height: 5.5rem;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
 @media (min-width: 768px) {
