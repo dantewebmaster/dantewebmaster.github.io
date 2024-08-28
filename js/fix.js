@@ -43,3 +43,6 @@ menuLinks.forEach((item) =>
     navMenu.setAttribute("aria-expanded", false);
   })
 );
+
+const actualYear = new Date().getFullYear();
+document.querySelector(".date-year").innerHTML = actualYear;
