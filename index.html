@@ -2,7 +2,7 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       name="description"
@@ -10,17 +10,16 @@
     />
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
     <title>Dante Webmaster - Desenvolvedor web, mobile, Full-Stack</title>
-    <link rel="stylesheet" href="css/styles.min.css" />
-    <link rel="stylesheet" href="css/fix.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Raleway:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
 
-    <!-- pen graph tags -->
+    <link rel="stylesheet" href="css/style.css" />
+
     <meta
       property="og:title"
       content="Dante Webmaster - Desenvolvedor web, mobile, Full-Stack"
@@ -37,210 +36,579 @@
     <meta property="og:url" content="https://dantewebmaster.github.io/" />
   </head>
   <body>
-    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-    <header id="inicio" class="site-header fullscreen" role="banner">
-      <video class="cover-video" autoplay muted loop id="cover-video">
-        <source src="cover-video.mp4" type="video/mp4" />
-      </video>
-      <h1 class="main-headline">Desenvolvimento Web Fullstack</h1>
-      <div id="nav-container" class="nav-container">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="header-logo col-xs-2">
-              <a href="#"
-                ><img
-                  class="logo-img"
-                  src="images/logo.png"
-                  alt="Dante Webmaster"
-              /></a>
-            </div>
-            <nav
-              id="site-navigation"
-              class="col-xs-7 main-navigation text-center text-uppercase clearfix"
+    <a class="skip-link" href="#content">Ir para o conteúdo</a>
+
+    <header id="site-header" class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="#inicio" class="brand">
+          <img
+            class="brand-logo"
+            src="images/logo.png"
+            alt="Dante Webmaster"
+            width="34"
+            height="34"
+          />
+          <span>Dante Webmaster</span>
+        </a>
+
+        <nav
+          id="site-navigation"
+          class="main-nav"
+          aria-label="Navegação principal"
+        >
+          <ul class="nav-links">
+            <li><a class="nav-link" href="#inicio">Início</a></li>
+            <li><a class="nav-link" href="#servicos">Serviços</a></li>
+            <li><a class="nav-link" href="#sobre">Sobre</a></li>
+            <li><a class="nav-link" href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-cta">
+          <a
+            href="https://linkedin.com/in/rdanteanjos/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-linkedin btn-sm"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
             >
-              <button
-                class="menu-toggle"
-                aria-controls="primary-menu"
-                aria-expanded="false"
-              >
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
-              <ul id="nav-menu">
-                <li><a class="menu-link" href="#inicio">Início</a></li>
-                <li><a class="menu-link" href="#servicos">Serviços</a></li>
-                <li><a class="menu-link" href="#sobre">Sobre</a></li>
-                <li><a class="menu-link" href="#contato">Contato</a></li>
-              </ul>
-            </nav>
-            <div class="header-phone col-xs-3 text-right hidden-xs">
+              <path
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"
+              />
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+
+        <button
+          id="menu-toggle"
+          class="menu-toggle"
+          aria-controls="site-navigation"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="content">
+      <section id="inicio" class="hero">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          aria-hidden="true"
+        >
+          <source src="cover-video.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="hero-badge-dot" aria-hidden="true"></span>
+              <span>Fortaleza / CE · Brasil</span>
+            </div>
+            <h1 class="hero-title">
+              Desenvolvimento Web
+              <span class="hero-title-accent">Fullstack</span>
+            </h1>
+            <p class="hero-subtitle">
+              Foco em tecnologias front-end modernas para criar experiências de
+              usuário excepcionais — integradas a APIs REST sólidas no back-end.
+            </p>
+            <div class="hero-actions">
               <a
                 href="https://linkedin.com/in/rdanteanjos/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="btn btn-light btn-phone"
-                ><i class="icon fa fa-linkedin"></i> LinkedIn</a
+                class="btn btn-linkedin"
               >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"
+                  />
+                </svg>
+                Contato via LinkedIn
+              </a>
+              <a href="#sobre" class="btn btn-ghost-light">
+                Conhecer trajetória
+              </a>
             </div>
           </div>
-        </div>
-      </div>
-    </header>
-    <div id="content" class="site-content">
-      <main>
-        <section id="servicos" class="section section-services text-center">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="service col-sm-3 col-xs-6">
-                <i class="icon fa fa-cogs"></i>
-                <h2>Desenvolvimento<br />Web, Mobile & Gráfico</h2>
-              </div>
-              <div class="service col-sm-3 col-xs-6">
-                <i class="icon fa fa-share-alt"></i>
-                <h2>Mídias Sociais<br />& Adwords</h2>
-              </div>
-              <div class="service col-sm-3 col-xs-6">
-                <i class="icon fa fa-camera"></i>
-                <h2>Tratamento<br />de Imagens</h2>
-              </div>
-              <div class="service col-sm-3 col-xs-6">
-                <i class="icon fa fa-line-chart"></i>
-                <h2>Otimização<br />& SEO</h2>
+
+          <aside class="hero-card" aria-label="Resumo profissional">
+            <div class="hero-card-header">
+              <span class="hero-card-title">Visão geral</span>
+              <div class="hero-card-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
               </div>
             </div>
-          </div>
-        </section>
-        <section id="sobre" class="section section-about">
-          <div class="container-fluid">
-            <div class="row middle-sm center-xs">
-              <div class="about-img col-sm-12 col-md-5">
-                <img
-                  src="images/dante-webmaster-desenvolvedor-web-fullstack.jpeg"
-                  alt="Sobre Dante Webmaster"
-                />
-                <div class="social-network">
-                  <a href="https://instagram.com/danteanjos_" target="_blank"
-                    ><i class="fa fa-instagram"></i
-                  ></a>
-                  <a href="https://linkedin.com/in/rdanteanjos/" target="_blank"
-                    ><i class="fa fa-linkedin"></i
-                  ></a>
-                  <a href="https://github.com/dantewebmaster" target="_blank"
-                    ><i class="fa fa-github"></i
-                  ></a>
-                </div>
+            <div class="hero-meta-list">
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Atuação atual</span>
+                <span class="hero-meta-value">Globo · Projetos estratégicos</span>
               </div>
-              <div class="about-text col-sm-12 col-md-7 text-left">
-                <h1 class="text-uppercase">Dante Webmaster</h1>
-                <h2>Desenvolvedor Web, Full-Stack</h2>
-                <p>
-                  Sou um desenvolvedor apaixonado por criar experiências de
-                  usuário excepcionais usando as mais recentes tecnologias
-                  front-end.
-                </p>
-                <p>
-                  Com mais de 3 anos de experiência em uma consultoria
-                  multinacional, atuei em projetos desafiadores para empresas
-                  líderes como Natura, Banco Itaú, Santander e Safra, adquiri um
-                  profundo conhecimento em JavaScript, React, Angular, HTML5,
-                  CSS3 e TypeScript.
-                </p>
-                <p>
-                  Além disso, minha experiência em back-end inclui a criação de
-                  APIs REST utilizando Node.js, NestJs e Prisma ORM,
-                  contribuindo para soluções completas e integradas.
-                </p>
-                <p>
-                  Atualmente, na <strong>Globo</strong>, estou focado em
-                  projetos estratégicos que continuam a aprimorar minhas
-                  habilidades técnicas e meu comprometimento pessoal. Meu
-                  histórico reflete um forte senso de responsabilidade e
-                  dedicação a cada projeto que abordo, sempre visando alcançar
-                  resultados excepcionais.
-                </p>
-                <blockquote>
-                  <p>
-                    Sempre me destaquei por um incrível senso de dono por todos
-                    os projetos em que tive a oportunidade de contribuir.
-                  </p>
-                </blockquote>
-                <span class="text-center center"
-                  ><a
-                    class="btn btn-dark"
-                    href="https://linkedin.com/in/rdanteanjos/"
-                    target="_blank"
-                    ><i class="icon fa fa-user"></i> Perfil completo</a
-                  ></span
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Experiência anterior</span>
+                <span class="hero-meta-value"
+                  >+3 anos em consultoria multinacional (Natura, Itaú, Santander
+                  e Safra)</span
+                >
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Stack principal</span>
+                <span class="hero-meta-value"
+                  >React, Angular, TypeScript, Node.js, NestJs &amp; Prisma
+                  ORM</span
+                >
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Filosofia</span>
+                <span class="hero-meta-value"
+                  >Handcrafted code · Sem geradores</span
                 >
               </div>
             </div>
+          </aside>
+        </div>
+
+        <a
+          href="#servicos"
+          class="hero-scroll"
+          aria-label="Rolar para serviços"
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </a>
+      </section>
+
+      <section id="servicos" class="section">
+        <div class="container">
+          <div class="section-header center">
+            <span class="section-eyebrow">Especialidades</span>
+            <h2 class="section-title">Áreas de atuação</h2>
           </div>
-        </section>
-        <section id="contato" class="section section-contact">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="contact-item col-md-4 col-sm-12 col-xs-12">
-                <div class="row middle-xs">
-                  <div class="col-md-4 col-sm-6 col-xs-3 text-center">
-                    <i class="icon fa fa-map-o"></i>
-                  </div>
-                  <div class="col-md-8 col-sm-6 col-xs-9 text-left">
-                    <h3>
-                      Atualmente residindo em<br />Fortaleza / CE - Brasil
-                    </h3>
-                  </div>
-                </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-icon blue" aria-hidden="true">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
               </div>
-              <div class="contact-item col-md-4 col-sm-12 col-xs-12">
-                <div class="row middle-xs">
-                  <div class="col-md-4 col-sm-6 col-xs-3 text-center">
-                    <a
-                      href="https://linkedin.com/in/rdanteanjos/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="icon fa fa-linkedin"></i
-                    ></a>
-                  </div>
-                  <div class="col-md-8 col-sm-6 col-xs-9 text-left">
-                    <h3>
-                      <a
-                        href="https://linkedin.com/in/rdanteanjos/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style="color: inherit; text-decoration: none;"
-                        >Conecte-se comigo via<br /><strong>LinkedIn</strong></a
-                      >
-                    </h3>
-                  </div>
-                </div>
+              <h3 class="service-title">
+                Desenvolvimento<br />Web, Mobile &amp; Gráfico
+              </h3>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon green" aria-hidden="true">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="18" cy="5" r="3" />
+                  <circle cx="6" cy="12" r="3" />
+                  <circle cx="18" cy="19" r="3" />
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                </svg>
               </div>
-              <div class="contact-item col-md-4 col-sm-12 col-xs-12">
-                <div class="row middle-xs">
-                  <div class="col-md-4 col-sm-6 col-xs-3 text-center">
-                    <i class="icon fa fa-heart-o"></i>
-                  </div>
-                  <div class="col-md-8 col-sm-6 col-xs-9 text-left">
-                    <h3>Handcrafted code<br />Sem geradores</h3>
-                  </div>
-                </div>
+              <h3 class="service-title">Mídias Sociais<br />&amp; Adwords</h3>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon amber" aria-hidden="true">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <polyline points="21 15 16 10 5 21" />
+                </svg>
+              </div>
+              <h3 class="service-title">Tratamento<br />de Imagens</h3>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon purple" aria-hidden="true">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="18" y1="20" x2="18" y2="10" />
+                  <line x1="12" y1="20" x2="12" y2="4" />
+                  <line x1="6" y1="20" x2="6" y2="14" />
+                </svg>
+              </div>
+              <h3 class="service-title">Otimização<br />&amp; SEO</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" class="section section-alt">
+        <div class="container about-grid">
+          <div class="about-media">
+            <div class="about-photo-frame">
+              <img
+                class="about-photo"
+                src="images/dante-webmaster-desenvolvedor-web-fullstack.jpeg"
+                alt="Sobre Dante Webmaster"
+              />
+            </div>
+            <div class="social-bar" aria-label="Redes sociais">
+              <a
+                class="social-pill"
+                href="https://instagram.com/danteanjos_"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+              <a
+                class="social-pill"
+                href="https://linkedin.com/in/rdanteanjos/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"
+                  />
+                </svg>
+              </a>
+              <a
+                class="social-pill"
+                href="https://github.com/dantewebmaster"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <span class="section-eyebrow">Sobre</span>
+            <h2>Dante Webmaster</h2>
+            <p class="about-role">Desenvolvedor Web, Full-Stack</p>
+
+            <div class="about-prose">
+              <p>
+                Sou um desenvolvedor apaixonado por criar experiências de
+                usuário excepcionais usando as mais recentes tecnologias
+                front-end.
+              </p>
+              <p>
+                Com mais de 3 anos de experiência em uma consultoria
+                multinacional, atuei em projetos desafiadores para empresas
+                líderes como <strong>Natura</strong>, <strong>Banco Itaú</strong>,
+                <strong>Santander</strong> e <strong>Safra</strong>, adquiri um
+                profundo conhecimento em JavaScript, React, Angular, HTML5, CSS3
+                e TypeScript.
+              </p>
+              <p>
+                Além disso, minha experiência em back-end inclui a criação de
+                APIs REST utilizando Node.js, NestJs e Prisma ORM, contribuindo
+                para soluções completas e integradas.
+              </p>
+              <p>
+                Atualmente, na <strong>Globo</strong>, estou focado em projetos
+                estratégicos que continuam a aprimorar minhas habilidades
+                técnicas e meu comprometimento pessoal. Meu histórico reflete um
+                forte senso de responsabilidade e dedicação a cada projeto que
+                abordo, sempre visando alcançar resultados excepcionais.
+              </p>
+            </div>
+
+            <div class="stack-list" aria-label="Tecnologias">
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">TypeScript</span>
+              <span class="stack-tag">React</span>
+              <span class="stack-tag">Angular</span>
+              <span class="stack-tag">HTML5</span>
+              <span class="stack-tag">CSS3</span>
+              <span class="stack-tag">Node.js</span>
+              <span class="stack-tag">NestJs</span>
+              <span class="stack-tag">Prisma ORM</span>
+            </div>
+
+            <blockquote class="about-quote">
+              <p>
+                “Sempre me destaquei por um incrível senso de dono por todos os
+                projetos em que tive a oportunidade de contribuir.”
+              </p>
+            </blockquote>
+
+            <a
+              class="btn btn-primary"
+              href="https://linkedin.com/in/rdanteanjos/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+              Perfil completo
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="section">
+        <div class="container">
+          <div class="section-header center">
+            <span class="section-eyebrow">Contato</span>
+            <h2 class="section-title">Vamos conversar</h2>
+          </div>
+
+          <div class="contact-grid">
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <span class="info-label">Localização</span>
+                <p class="info-value">
+                  Atualmente residindo em<br />Fortaleza / CE - Brasil
+                </p>
+              </div>
+            </div>
+
+            <a
+              class="info-card info-card-link"
+              href="https://linkedin.com/in/rdanteanjos/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="info-icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <span class="info-label">Canal Oficial</span>
+                <p class="info-value">
+                  Conecte-se comigo via<br />LinkedIn
+                </p>
+              </div>
+            </a>
+
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <span class="info-label">Código</span>
+                <p class="info-value">Handcrafted code<br />Sem geradores</p>
               </div>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
-    <footer id="colophon" class="site-footer" role="content-info">
-      <div class="container-fluid">
-        <p class="copyright text-center">
-          &copy; <span class="date-year">2024</span>: Dante Webmaster -
+        </div>
+      </section>
+    </main>
+
+    <footer id="colophon" class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <p class="copyright">
+          &copy; <span class="date-year">2026</span> Dante Webmaster -
           Desenvolvimento Web Fullstack
         </p>
+        <div class="footer-links">
+          <a
+            href="https://linkedin.com/in/rdanteanjos/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/dantewebmaster"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://instagram.com/danteanjos_"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+        </div>
       </div>
     </footer>
-    <a href="#inicio" id="to-top" class="to-top">Início</a>
-    <script src="js/main.min.js"></script>
-    <script src="js/fix.js"></script>
+
+    <a
+      href="#inicio"
+      id="to-top"
+      class="to-top"
+      aria-label="Voltar ao início"
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <polyline points="18 15 12 9 6 15" />
+      </svg>
+    </a>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
